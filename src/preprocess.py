@@ -102,6 +102,7 @@ def make_quick_plot(df: pd.DataFrame, output_path: Path) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Preprocess NASA POWER hourly CSV.")
+    parser.add_argument("--site", required=True, help="Site name")
     parser.add_argument(
         "--input",
         required=True,
@@ -128,6 +129,19 @@ def main() -> None:
 
     df_raw = load_power_csv(input_path)
     df_clean = clean_power_dataframe(df_raw)
+    df_clean["site"] = args.site
+    df_clean = df_clean[
+        [
+            "site",
+            "timestamp",
+            "ghi",
+            "temp_2m_c",
+            "rh_2m_pct",
+            "wind_2m_mps",
+            "surface_pressure_kpa",
+            "ghi_tplus1",
+        ]
+    ]
 
     df_clean.to_csv(output_path, index=False)
     make_quick_plot(df_clean, plot_path)

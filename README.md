@@ -1,9 +1,6 @@
 # Solar Irradiance HPC Project
 
-Performance-aware one-hour-ahead solar irradiance forecasting using public meteorological data, developed as a graduate HPC course project. This project develops a reproducible, performance-aware workflow for **1-hour-ahead solar irradiance forecasting** using public meteorological data and evaluates both **forecasting accuracy** and **computational performance** on the **Ganymede HPC system**.
-
-The project focuses on forecasting **Global Horizontal Irradiance (GHI)** using hourly NASA POWER data from multiple U.S. sites and compares both simple and more advanced machine learning models. In addition to the scientific forecasting task, the project includes an explicit HPC component through **serial vs parallel benchmarking**, **speedup analysis**, **efficiency analysis**, and **repeated-run performance evaluation**.
----
+Performance-aware one-hour-ahead solar irradiance forecasting using public meteorological data, developed as a graduate HPC course project. This project develops a reproducible, performance-aware workflow for **1-hour-ahead solar irradiance forecasting** using public meteorological data and evaluates both **forecasting accuracy** and **computational performance** on the **Ganymede HPC system**. It focuses on forecasting **Global Horizontal Irradiance (GHI)** using hourly NASA POWER data from multiple U.S. sites and compares both simple and more advanced machine learning models. In addition to the scientific forecasting task, the project includes an explicit HPC component through **serial vs parallel benchmarking**, **speedup analysis**, **efficiency analysis**, and **repeated-run performance evaluation**.
 
 ## Project summary
 This repository implements a clean, reproducible workflow for forecasting **global horizontal irradiance (GHI)** from hourly meteorological predictors. The project combines:
